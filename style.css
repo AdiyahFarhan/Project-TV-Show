@@ -60,6 +60,7 @@ body {
   border-radius: 10px;
   text-align: center;
   font-size: 1em;
+  height: 100%;
 }
 .episode-card:hover {
   border-color: #010101;
