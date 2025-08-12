@@ -30,10 +30,12 @@ function setupSearch(allEpisodes) {
   });
 }
 
-// Updates the match count display
+// Update match count in the format "Showing 10/73 episodes"
 function updateMatchCount(count) {
-  const matchCount = document.getElementById("match-count");
-  matchCount.textContent = count === 1 ? "1 match" : `${count} matches`;
+  const totalCount = getAllEpisodes().length;
+  document.getElementById(
+    "match-count"
+  ).textContent = `Showing ${count}/${totalCount} episode(s)`;
 }
 
 // Sets up the episode selector dropdown

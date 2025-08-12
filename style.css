@@ -1,11 +1,15 @@
+body {
+  background-color: #f0f0f0;
+}
+
 .top-bar {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
   padding: 2em;
-  margin-left: 30px;
-  color: #fff;
+  justify-content: center;
+  gap: 3em;
   font-size: 13px;
 }
 
