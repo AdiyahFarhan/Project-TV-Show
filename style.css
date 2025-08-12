@@ -1,3 +1,24 @@
+body {
+  background-color: #f0f0f0;
+}
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  padding: 2em;
+  justify-content: center;
+  gap: 3em;
+  font-size: 13px;
+}
+
+.search-container {
+  margin: 1em 0;
+  width: 300px;
+  padding: 0.5em;
+}
+
 #root {
   color: black;
   display: flex;
@@ -46,6 +67,7 @@ body {
   border-radius: 10px;
   justify-content: center;
   font-size: 1em;
+  height: 100%;
   color: #333;
   margin-bottom: 0px;
 }
