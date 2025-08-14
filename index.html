@@ -1,43 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Show Project | Adiyah Farhan (AdiyahFarhan)</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TV Show Project | Adiyah Farhan (AdiyahFarhan)</title>
-  <link href="style.css" rel="stylesheet" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-</head>
+  <body>
+    <div class="top-bar">
+      <div id="search-container">
+        <select id="episode-select">
+          <option value="all">Show all episodes</option>
+        </select>
 
-<body>
+        <input
+          type="text"
+          id="search-box"
+          placeholder="Search for episodes..."
+        />
 
-  <div class="top-bar">
-
-    <div id="search-container">
-
-      <select id="episode-select">
-        <option value="all">Show all episodes</option>
-      </select>
-      
-      <input type="text" id="search-box" placeholder="Search for episodes..." />
-
-      <span id="match-count"></span>
+        <span id="match-count"></span>
+      </div>
+    </div>
+    <div class="loading" id="loading">
+      <p>Loading episodes...</p>
+    </div>
+    <div id="root">
+      <template id="episode-template">
+        <section class="episode-card">
+          <h1 class="episode-title"></h1>
+          <img class="episode-image" alt="Episode Image" />
+          <p class="episode-summary"></p>
+        </section>
+      </template>
     </div>
 
-  </div>
-
-  <div id="root">
-    <template id="episode-template">
-      <section class="episode-card">
-        <h1 class="episode-title"></h1>
-        <img class="episode-image" alt="Episode Image" />
-        <p class="episode-summary"></p>
-      </section>
-    </template>
-  </div>
-
-  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-  <script src="episodes.js"></script>
+    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+    <!--<script src="episodes.js"></script>-->
 
     <footer>
       <p>
@@ -46,8 +47,7 @@
       </p>
     </footer>
 
-  <!-- Loads YOUR javascript code -->
-  <script src="script.js"></script>
-</body>
-
+    <!-- Loads YOUR javascript code -->
+    <script src="script.js"></script>
+  </body>
 </html>
