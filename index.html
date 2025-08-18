@@ -1,54 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Show Project | Adiyah Farhan (AdiyahFarhan)</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TV Show Project | Adiyah Farhan (AdiyahFarhan)</title>
-  <link href="style.css" rel="stylesheet" />
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-</head>
+  <body>
+    <div class="top-bar">
+      <div id="show-search-container">
+        <label for="showSearch"><strong>Filtering for</strong></label>
+        <input
+          class="search-container"
+          id="showSearch"
+          type="text"
+          placeholder="Type to search"
+        />
 
-<body>
-  <div class="top-bar">
-    <div id="search-container">
-      <select id="show-select">
-        <option value="">Loading shows...</option>
-      </select>
-      <select id="episode-select">
-        <option value="all">Show all episodes</option>
-      </select>
+        <span id="searchCount"></span>
 
-      <input type="text" id="search-box" placeholder="Search for episodes..." />
+        <select id="show-select">
+          <option value="all-shows">Show all shows</option>
+        </select>
+      </div>
+      <div id="episode-search-container">
+        <select id="episode-select">
+          <option value="all">Show all episodes</option>
+        </select>
 
-      <span id="match-count"></span>
+        <input
+          class="search-container"
+          type="text"
+          id="episode-search"
+          placeholder="Search for episodes..."
+        />
+
+        <span id="match-count"></span>
+      </div>
+      <a id="back-to-shows">Back to Shows Listing</a>
     </div>
-  </div>
-  <div class="loading" id="loading">
-   
-  </div>
-  <div id="root">
-    <template id="episode-template">
-      <section class="episode-card">
-        <h1 class="episode-title"></h1>
-        <img class="episode-image" alt="Episode Image" />
-        <p class="episode-summary"></p>
-      </section>
-    </template>
-  </div>
 
-  <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
-  <!--<script src="episodes.js"></script>-->
+    <div class="loading" id="loading"></div>
 
-  <footer>
-    <p>
-      Data Source:
-      <a href="https://tvmaze.com/">TVMaze.com</a>
-    </p>
-  </footer>
+    <div id="show-container">
+      <template id="show-template">
+        <section class="show-card">
+          <div class="show-title"></div>
+          <div class="show-content">
+            <img class="show-image" alt="Show Image" />
+            <p class="show-summary"></p>
+            <div class="show-details">
+              <p class="show-genres"></p>
+              <p class="show-status"></p>
+              <p class="show-rating"></p>
+              <p class="show-runtime"></p>
+            </div>
+          </div>
+        </section>
+      </template>
+    </div>
 
-  <!-- Loads YOUR javascript code -->
-  <script src="script.js"></script>
-</body>
+    <div id="episode-container">
+      <template id="episode-template">
+        <section class="episode-card">
+          <h1 class="episode-title"></h1>
+          <img class="episode-image" alt="Episode Image" />
+          <p class="episode-summary"></p>
+        </section>
+      </template>
+    </div>
 
+    <!-- Loads a provided function called getAllEpisodes() which returns all episodes -->
+    <!--<script src="episodes.js"></script>-->
+
+    <footer>
+      <p>
+        Data Source:
+        <a href="https://tvmaze.com/">TVMaze.com</a>
+      </p>
+    </footer>
+
+    <!-- Loads YOUR javascript code -->
+    <script src="script.js"></script>
+  </body>
 </html>
