@@ -1,31 +1,4 @@
-body {
-  background-color: #f0f0f0;
-}
-
-.top-bar {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  align-items: center;
-  padding: 2em;
-  justify-content: center;
-  gap: 3em;
-  font-size: 13px;
-}
-
-.search-container {
-  margin: 1em 0;
-  width: 300px;
-  padding: 0.5em;
-}
-
-#root {
-  color: black;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
+/********************* Main Body Style *******************/
 body {
   font-family: monospace;
   background-color: #f0f0f0;
@@ -33,6 +6,112 @@ body {
   padding: 20px;
 }
 
+/******************* Top Bar Styles *******************/
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  padding: 2em;
+  justify-content: center;
+  gap: 20px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  margin: 1em 0;
+  width: 200px;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+}
+
+#show-select {
+  margin: 1em 0;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+/*************** Template Styles ***********************/
+#show-container,
+#episode-container {
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/******************* Show Card Styles *******************/
+
+.show-card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+  overflow-y: scroll;
+  margin-left: 20px;
+}
+
+.show-card:hover {
+  border-color: #010101;
+  box-shadow: #4d5253c4 20px 20px;
+  transform: translate(-10px, -10px);
+  background-color: #f0f0f0;
+}
+
+/* Poster image */
+.show-content img {
+  width: 150px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Content */
+.show-content {
+  display: flex;
+  gap: 20px;
+}
+
+/* Title */
+.show-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.show-title:hover {
+  cursor: pointer;
+  color: #444;
+}
+
+/* Summary */
+.show-summary {
+  flex: 1;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Details box */
+.show-details {
+  min-width: 150px;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  font-size: 14px;
+  height: fit-content;
+  justify-content: center;
+}
+
+.show-details p {
+  margin: 6px 0;
+}
+
+/*********************** Episode Card Styles ***********************/
 .episode-card {
   display: flex;
   flex-direction: column;
@@ -77,6 +156,7 @@ body {
   transform: translate(-10px, -10px);
 }
 
+/******************* Footer *********************/
 footer {
   text-align: center;
   margin-top: 20px;
